@@ -1,0 +1,74 @@
+﻿@using CarSeerDemo.ViewModels
+@model SearchFormViewModel
+@{
+    ViewData["Title"] = "Vehicle Lookup - Search";
+}
+
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Find Your Vehicle Information</h1>
+            <p>Search vehicle types and models by make and year</p>
+        </div>
+    </div>
+</div>
+
+<!-- Search Card -->
+<div class="search-card-container">
+    <div class="container">
+        <div class="search-card fade-in">
+            <h2 class="card-title">Search Vehicles</h2>
+
+            <form id="searchForm">
+                @Html.AntiForgeryToken()
+                <!-- Make Selection -->
+                <div class="form-group">
+                    <label for="makeSelect" class="form-label">
+                        <i class="fas fa-car me-2"></i>
+                        Vehicle Make
+                    </label>
+                    <select id="makeSelect" class="form-select" required>
+                        <option value="">Loading makes...</option>
+                    </select>
+                    <small class="info-text">
+                        <i class="fas fa-info-circle me-1"></i>
+                        Type to search from thousands of makes
+                    </small>
+                </div>
+
+                <!-- Model Year -->
+                <div class="form-group">
+                    <label for="yearInput" class="form-label">
+                        <i class="fas fa-calendar-alt me-2"></i>
+                        Model Year
+                    </label>
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control"
+                               id="yearInput"
+                               placeholder="Select or enter year (e.g., 2015)"
+                               required
+                               autocomplete="off" />
+                        <span class="input-group-text">
+                            <i class="fas fa-calendar"></i>
+                        </span>
+                    </div>
+                    <small class="info-text">
+                        <i class="fas fa-info-circle me-1"></i>
+                        Select a year between 1995 and <span id="currentYear"></span>
+                    </small>
+                </div>
+
+                <!-- Search Button -->
+                <div class="form-group mb-0">
+                    <button type="submit" class="btn-search" id="searchBtn" disabled>
+                        <i class="fas fa-search me-2"></i>
+                        Search Vehicles
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,306 @@
+:root {
+    --carseer-orange: #f93;
+    --carseer-dark: #2b2b2b;
+    --carseer-black: #1a1a1a;
+    --carseer-white: #ffffff;
+    --carseer-light-bg: #f5f5f5;
+    --carseer-border: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--carseer-light-bg);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.top-header {
+    background: var(--carseer-white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* .logo {
+                    font-size: 1.75rem;
+                    font-weight: 700;
+                    color: var(--carseer-black);
+                    text-decoration: none;
+                    background-image: url(https://jo.carseer.com/assets/images/imgs/Logo/carseer-en.svg);
+                } */
+
+.hero-section {
+    background: var(--carseer-orange);
+    padding: 4rem 0 5rem 0;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    color: var(--carseer-white);
+    margin-bottom: 2rem;
+}
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero-content p {
+        font-size: 1.25rem;
+        opacity: 0.95;
+    }
+
+.search-card-container {
+    margin-top: -3rem;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 4rem;
+}
+
+.search-card {
+    background: var(--carseer-white);
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.card-title {
+    color: var(--carseer-black);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.75rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--carseer-dark);
+    margin-bottom: 0.75rem;
+    display: block;
+    font-size: 0.95rem;
+}
+
+.form-control, .form-select {
+    border: 2px solid var(--carseer-border);
+    border-radius: 6px;
+    padding: 0.875rem 1rem;
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.3s ease;
+    background: var(--carseer-white);
+}
+
+    .form-control:focus, .form-select:focus {
+        border-color: var(--carseer-orange);
+        box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.1);
+        outline: none;
+    }
+
+.select2-container--bootstrap-5 .select2-selection {
+    border: 2px solid var(--carseer-border) !important;
+    border-radius: 6px !important;
+    min-height: 52px !important;
+    transition: all 0.3s ease;
+}
+
+.select2-container--bootstrap-5.select2-container--focus .select2-selection,
+.select2-container--bootstrap-5.select2-container--open .select2-selection {
+    border-color: var(--carseer-orange) !important;
+    box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.1) !important;
+}
+
+.select2-container--bootstrap-5 .select2-dropdown {
+    border: 2px solid var(--carseer-orange) !important;
+    border-radius: 6px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+    z-index: 99999 !important;
+}
+
+.select2-dropdown {
+    z-index: 99999 !important;
+}
+
+.select2-container {
+    z-index: 9998 !important;
+}
+
+.select2-container--bootstrap-5 .select2-selection__rendered {
+    line-height: 48px !important;
+    padding-left: 1rem !important;
+}
+
+.select2-results__option--highlighted {
+    background-color: var(--carseer-orange) !important;
+}
+
+.datepicker {
+    z-index: 99999 !important;
+    border-radius: 6px !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+    .datepicker table tr td.active,
+    .datepicker table tr td.active:hover,
+    .datepicker table tr td.active.disabled,
+    .datepicker table tr td.active.disabled:hover {
+        background-color: var(--carseer-orange) !important;
+        background-image: none !important;
+    }
+
+    .datepicker table tr td.today,
+    .datepicker table tr td.today:hover {
+        background-color: #ffe5cc !important;
+        color: var(--carseer-dark) !important;
+    }
+
+.datepicker-dropdown {
+    z-index: 99999 !important;
+}
+
+.input-group-text {
+    background: var(--carseer-white);
+    border: 2px solid var(--carseer-border);
+    border-left: none;
+    color: var(--carseer-orange);
+    font-size: 1.1rem;
+}
+
+.input-group .form-control {
+    border-right: none;
+}
+
+    .input-group .form-control:focus + .input-group-text {
+        border-color: var(--carseer-orange);
+    }
+
+.btn-search {
+    background: var(--carseer-black);
+    color: var(--carseer-white);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    width: 100%;
+    cursor: pointer;
+}
+
+    .btn-search:hover:not(:disabled) {
+        background: var(--carseer-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-search:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+.info-text {
+    color: #666;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+    .info-text i {
+        color: var(--carseer-orange);
+    }
+
+.footer-info {
+    background: var(--carseer-white);
+    padding: 2rem 0;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+}
+
+.loading-content {
+    background: var(--carseer-white);
+    padding: 2.5rem 3.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+    .loading-content .spinner-border {
+        width: 3rem;
+        height: 3rem;
+        color: var(--carseer-orange);
+        border-width: 4px;
+    }
+
+    .loading-content h5 {
+        color: var(--carseer-black);
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0 4rem 0;
+    }
+
+    .hero-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .search-card {
+        padding: 1.75rem;
+        margin: 0 1rem;
+    }
+
+    .btn-search {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+

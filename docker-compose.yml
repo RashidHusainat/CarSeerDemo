@@ -1,0 +1,6 @@
+services:
+  carseerdemo:
+    image: ${DOCKER_REGISTRY-}carseerdemo
+    build:
+      context: .
+      dockerfile: CarSeerDemo/Dockerfile
